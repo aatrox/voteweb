@@ -1,16 +1,16 @@
 <div class='container'>
 	<div class='row'>
 		<div class='col-md-7 col-md-offset-2'>
-			<form>
+			<form name='loginform' ng-controller='LoginController as loginCtrl' ng-submit='loginform.$valid && login()'>
 				<div class='form-group'>
-					<label>Email address</label>
-					<input type='email' class='form-control' >
+					<label>Username</label>
+					<input type='text' ng-model="cusername" class='form-control' required>
 				</div>
 				<div class='form-group'>
 					<label>Password</label>
-					<input type='password' class='form-control'>
+					<input type='password' ng-model="cpassword" class='form-control' required>
 				</div>
-				<button id='login-btn' type='submit' class='btn btn-primary'>Log in</button>				
+				<button id='login-btn' type='submit' class='btn btn-primary' >Log in</button>				
 				<input type='checkbox'> Remember Me
 				<a id='fp' href="#">Forgot Password?</a>
 				

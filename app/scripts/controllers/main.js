@@ -14,4 +14,6 @@ angular.module('voteWebApp')
       'AngularJS',
       'Karma'
     ];
+
+    console.log(123);
   });
