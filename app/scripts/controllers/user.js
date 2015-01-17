@@ -7,9 +7,25 @@
  * # AboutCtrl
  * Controller of the voteWebApp
  */
-angular.module('voteWebApp')
-  .controller('UserController', ['$scope', 'StoreData', function ($scope, StoreData){
-  	console.log('yo');
-  	console.log(StoreData.Tok);
-  }]);
+ 
+myApp.factory('Entry', function($resource){
+  return $resource('http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id');
+})
 
+
+
+myApp.controller('UserController', ['$scope', 'StoreData', 'Entry', function ($scope, StoreData, Entry){
+  	console.log('yoqi');
+  	console.log(StoreData.Tok.token);
+
+  	
+  	$scope.entries=Entry.query({token: StoreData.Tok.token}, function(){
+  		console.log($scope.entries);
+  	});
+
+}]);
+
+
+
+
+ 

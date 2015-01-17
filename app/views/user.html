@@ -1,3 +1,12 @@
-<div>
-<h1>welcome!1</h1>
+<div >
+	<h1>Idea List</h1>
+	<table>
+  <tr ng-repeat= "entry in entries">
+  	<td>{{entry.id}}</td>
+  	<td>{{entry.title}}</td>
+  	<td>{{entry.content}}</td>
+  	
+  	<td><a href="#/views/single.html/{{entry.id}}"><button>View</button></a></td>
+  </tr>
+</table>
 </div>

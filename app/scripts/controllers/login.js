@@ -23,8 +23,9 @@ myApp.controller('LoginController', ['$scope', '$http', 'StoreData',function ($s
     console.log(data);
       StoreData.Tok = data;
       console.log("s" + StoreData.Tok);
+      window.location.href='#/views/user.html';
     })
- 	  window.location.href='#/views/user.html';
+ 	  
  }
 
   }]);
