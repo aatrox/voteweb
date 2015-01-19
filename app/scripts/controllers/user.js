@@ -9,7 +9,11 @@
  */
  
 myApp.factory('Entry', function($resource){
-  return $resource('http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id');
+  return $resource('http://sat-idea-voter.herokuapp.com/api/v1/ideas/:id', {id: '@id'}, {
+  	update: {
+  		method: 'PUT'
+  	}
+  });
 })
 
 

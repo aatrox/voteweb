@@ -35,6 +35,18 @@ angular
         templateUrl: 'views/single.html',
         controller: 'SingleController'
       })
+      .when('/views/register.html', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterController'
+      })
+      .when('/views/create.html', {
+        templateUrl: 'views/create.html',
+        controller: 'CreateController'
+      })
+      .when('/views/update.html/:id', {
+        templateUrl: 'views/update.html',
+        controller: 'UpdateController'
+      })
       .otherwise({
         redirectTo: '/'
       });
