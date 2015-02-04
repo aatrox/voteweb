@@ -24,6 +24,10 @@ myApp.controller('LoginController', ['$scope', '$http', 'StoreData',function ($s
       StoreData.Tok = data;
       console.log("s" + StoreData.Tok);
       window.location.href='#/views/user.html';
+    }).error(function(data){
+    	$scope.errorMessage = data.error;
+    	
+    	console.log($scope.errorMessage);
     })
  	  
  }
