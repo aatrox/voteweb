@@ -1,0 +1,13 @@
+<h1>Creat our new idea</h1>
+<form name='createform' ng-submit='createform.$valid && create()'>
+	<div class='form-group'>
+		<label>Title</label>
+		<input type='text' class='form-control' ng-model='ctitle' required>
+	</div>
+	<div class='form-group'>
+		<label>Content</label>
+		<textarea class='form-control' row='3' ng-model='ccontent' required></textarea>
+	</div>
+	<button type='submit' class='btn btn-primary'>Submit</button><br><br>
+</form>
+

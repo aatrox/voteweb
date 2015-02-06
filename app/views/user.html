@@ -1,0 +1,16 @@
+<div >
+	<div id = 'newidea'>
+    <h2>Create a new idea!</h2>
+    <a  href='#/views/create.html'><button class='btn btn-success'>Start<span class='glyphicon glyphicon-ok'></span></button></a>
+  </div><br>
+  <h1>Idea List</h1><br>
+  <ul class='list-group'>
+  	<li id='idealist' class='list-group-item' ng-repeat= "entry in entries" >  
+    	<h1 id='ideati'>{{entry.title}}</h1>
+      <a href="#/views/single.html/{{entry.id}}"><button class='btn btn-info'>View this article</button></a>
+      <p>score: {{entry.score}}</p>
+    	<p>{{entry.content}}</p>
+      <br>
+    </li>
+  </ul>
+</div>
